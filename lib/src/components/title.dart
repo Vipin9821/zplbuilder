@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-import 'zpl_composer.dart';
 import 'flex.dart';
+import 'zpl_composer.dart';
 
 class ZplTitle implements ZplComposer {
   final String text;
@@ -9,13 +8,13 @@ class ZplTitle implements ZplComposer {
   final ZplFlex flex;
 
   ZplTitle(
-      {@required this.text,
-      @required this.verticalPosition,
-      @required this.horizontalPosition,
-      @required this.flex});
+      {required this.text,
+      required this.verticalPosition,
+      required this.horizontalPosition,
+      required this.flex});
 
   @override
-  String build([ZplComposer parent]) {
+  String build([ZplComposer? parent]) {
     if (flex == ZplFlex.left) {
       return '^FO$horizontalPosition, $verticalPosition^FD$text ^FB500,3,1,L^FS';
     }

@@ -4,19 +4,17 @@ version: 0.0.6
 homepage: https://github.com/ITGest/zplbuilder
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=3.0.0 <4.0.0"
+  # flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  hex: ^0.1.2
-  
+  hex:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

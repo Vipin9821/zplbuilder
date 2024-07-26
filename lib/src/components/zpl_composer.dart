@@ -1,3 +1,3 @@
 abstract class ZplComposer {
-  String build([ZplComposer parent]);
+  String build([ZplComposer? parent]);
 }

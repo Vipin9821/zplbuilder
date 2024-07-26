@@ -7,7 +7,7 @@ class Font implements ZplComposer {
   Font({this.family = 'A', this.fontSize = 23});
 
   @override
-  String build([ZplComposer parent])  {
+  String build([ZplComposer? parent]) {
     return '^CF$family, $fontSize';
   }
 }

@@ -1,9 +1,11 @@
 import 'dart:typed_data';
-import 'package:hex/hex.dart';
+
 import 'package:flutter/material.dart';
+import 'package:hex/hex.dart';
+
 import '../components/flex.dart';
-import '../components/title.dart';
 import '../components/font.dart';
+import '../components/title.dart';
 import 'ibuilder.dart';
 
 // THIS OBJECT WAS CREATED TO CONTROL THE ELEMENTS VERTICAL POSITION
@@ -17,18 +19,18 @@ class ZplPageBuilder implements ZplBuilder {
   String _currentString = '';
 
   @override
-  ZplBuilder addFont({int fontSize = 23, String family = 'A'}) {
+  ZplBuilder addFont({int fontSize = 23, String? family = 'A'}) {
     if (_currentString == '') {
       _currentString += '^XA \n';
     }
 
-    _currentString += Font(family: family, fontSize: fontSize).build() + '\n';
+    _currentString += Font(family: family!, fontSize: fontSize).build() + '\n';
 
     return this;
   }
 
   @override
-  ZplBuilder addTitle({String text}) {
+  ZplBuilder addTitle({required String text}) {
     if (_currentString == '') {
       _currentString += '^XA \n';
       _verticalPosition += 50;
@@ -49,7 +51,7 @@ class ZplPageBuilder implements ZplBuilder {
 
   //THIS IS JUST A KEY-VALUE PAIR (label and its value)
   @override
-  ZplBuilder addRow({String label, String value}) {
+  ZplBuilder addRow({required String label, required String value}) {
     if (_currentString == '') {
       _currentString += '^XA \n';
       _verticalPosition += 50;
